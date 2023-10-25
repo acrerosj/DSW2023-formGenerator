@@ -1,5 +1,7 @@
 <?php 
-class Form {
+require_once 'Element.php';
+
+class Form extends Element{
     private $action;
     private $title;
     private $method;
@@ -15,7 +17,7 @@ class Form {
     }
 
     public function add(Field $field) {
-        $this->fields[] = $field;
+            $this->fields[] = $field;
     }
 
     public function render() {
